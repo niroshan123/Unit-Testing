@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--running multiple testcases at one go can run even without java jdl setup-->
+<suite name="Regression Test Suit" verbose="1" >
+<!--    <test name="testing.annotations" >-->
+    <test name="groups" >
+        <groups>
+            <run>
+                <include name="smoke"></include>
+<!--                <include name="reg">-->
+<!--                </include>-->
+                <exclude name="reg"></exclude>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="groups.GroupTest1" />
+            <class name="groups.GroupTest2" />
+            <class name="groups.GroupTest3" />
+
+        </classes>
+<!--        <classes>-->
+<!--            <class name="tesing.annotations.TestNGTest1" />-->
+<!--            <class name="tesing.annotations.TestNGTest2" />-->
+<!--            <class name="tesing.annotations.TestNGTest3" />-->
+<!--            <class name="tesing.annotations.TestNGTest4" />-->
+<!--        </classes>-->
+    </test>
+
+<!--    <test name="Regression1">-->
+<!--        <classes>-->
+<!--            <class name="test.sample.ParameterSample"/>-->
+<!--            <class name="test.sample.ParameterTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
